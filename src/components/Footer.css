@@ -1,0 +1,63 @@
+.footer-area { width: 100%; font-family: 'Inter', sans-serif; background-color: #fff; }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+.region-section { padding: 40px 0; background-color: #f8f9fa; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 25px; color: #1c1c1c; }
+.region-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.region-item { display: flex; align-items: center; gap: 12px; }
+.region-flag-img { width: 24px; height: 18px; object-fit: cover; }
+.region-name { font-size: 16px; margin: 0; color: #1c1c1c; }
+.region-url { font-size: 13px; margin: 0; color: #8b96a5; }
+
+.newsletter-section { padding: 40px 0; background-color: #eff2f4; text-align: center; }
+.newsletter-container { max-width: 800px; margin: 0 auto; }
+.newsletter-container h3 { color: #1C1C1C; margin-bottom: -5px; font-size: 20px; font-weight: 600; }
+.newsletter-container p { color: #606060; margin-bottom: 20px; }
+.newsletter-form { display: flex; justify-content: center; gap: 10px; }
+.input-wrapper { position: relative; width: 300px; }
+.email-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #8b96a5; }
+.newsletter-form input { width: 100%; padding: 11px 10px 11px 35px; border: 1px solid #dee2e7; border-radius: 6px; box-sizing: border-box; outline: none; }
+.newsletter-form button { padding: 11px 24px; background-color: #0d6efd; color: white; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; font-weight: 500; }
+.newsletter-form button:hover { background-color: #0056b3; }
+
+.footer-main { padding: 60px 0; background-color: white; border-top: 1px solid #dee2e7; }
+.footer-flex { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.footer-brand { flex: 0 0 280px; }
+.brand-display { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.brand-text { font-size: 24px; font-weight: 800; color: #8cb7f5; }
+.footer-logo { height: 40px; }
+.brand-desc { color: #505050; line-height: 1.5; margin-bottom: 20px; font-size: 16px; }
+
+.social-links { display: flex; gap: 10px; }
+.social-icon { width: 32px; height: 32px; background-color: #BDC4CD; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: 0.3s; }
+.social-icon i { color: white; font-size: 16px; }
+.social-icon:hover { background-color: #0d6efd; transform: translateY(-3px); }
+
+.footer-links-wrapper { display: flex; gap: 83px; flex-grow: 1; justify-content: flex-end; flex-wrap: wrap; }
+.link-col h4 { font-size: 16px; font-weight: 600; margin-bottom: 15px; color: #1c1c1c; }
+.link-col p { color: #8b96a5; font-size: 14px; margin: 8px 0; cursor: pointer; transition: 0.2s; }
+.link-col p:hover { color: #1c1c1c; }
+
+.app-badge { width: 101px; height: 42px; background-color: #1c1c1c; border-radius: 6px; margin-bottom: 8px; display: flex; align-items: center; padding: 0 10px; cursor: pointer; transition: 0.2s; color: white; }
+.app-badge i { font-size: 18px; margin-right: 8px; }
+.badge-text { display: flex; flex-direction: column; line-height: 1.1; }
+.badge-text span { font-size: 8px; text-transform: uppercase; }
+.badge-text strong { font-size: 12px; }
+.app-badge:hover { transform: scale(1.05); background-color: #000; }
+
+.footer-bottom { padding: 20px 0; background-color: #eff2f4; border-top: 1px solid #dee2e7; }
+.bottom-flex { display: flex; justify-content: space-between; align-items: center; color: #606060; font-size: 14px; }
+.lang-picker { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.bottom-flag { width: 22px; }
+
+@media (max-width: 1024px) {
+  .footer-flex { flex-direction: column; align-items: flex-start; }
+  .footer-links-wrapper { justify-content: flex-start; width: 100%; margin-top: 30px; }
+  .region-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .region-grid { grid-template-columns: repeat(2, 1fr); }
+  .newsletter-form { flex-direction: column; align-items: center; }
+  .input-wrapper, .newsletter-form button { width: 100%; max-width: 300px; }
+}

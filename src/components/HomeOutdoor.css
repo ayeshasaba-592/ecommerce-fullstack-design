@@ -1,0 +1,142 @@
+.home-wrapper {
+  padding: 20px 40px;
+  background-color: #f8f9fa;
+}
+
+.home-white-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  border: 1px solid #DEE2E7;
+  overflow: hidden;
+  height: 257px; 
+}
+
+/* Sidebar Styling */
+.home-sidebar {
+  width: 280px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.home-sidebar-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-sidebar-overlay {
+  position: relative;
+  padding: 20px;
+  z-index: 2;
+}
+
+.home-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.home-source-btn {
+  padding: 10px 16px;
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Styling */
+.home-categories-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.home-category-card {
+  position: relative;
+  padding: 16px;
+  border-left: 1px solid #DEE2E7;
+  border-bottom: 1px solid #DEE2E7;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.home-card-name {
+  margin: 0;
+  font-size: 16px;
+  color: #1C1C1C;
+}
+
+.home-price-text {
+  font-size: 13px;
+  color: #8B96A5;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.home-product-img {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+/* --- MOBILE VIEW LOGIC --- */
+
+@media (max-width: 1024px) {
+  .home-white-container {
+    flex-direction: column;
+    height: auto; 
+    overflow: visible;
+  }
+  .home-sidebar {
+    width: 100%;
+    height: auto; 
+    min-height: 150px;
+    padding-bottom: 20px;
+  }
+  .home-sidebar-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-categories-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-categories-grid {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .home-wrapper {
+    padding: 10px;
+  }
+  .home-category-card {
+    height: 120px; 
+    border-left: none;
+    border-right: none;
+  }
+  .home-product-img {
+    width: 70px; 
+    height: 70px;
+  }
+  .home-source-btn {
+    width: auto;
+    padding: 8px 20px;
+  }
+}

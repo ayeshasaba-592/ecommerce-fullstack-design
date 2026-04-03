@@ -1,0 +1,274 @@
+.navbar-wrapper {
+  background: #fff;
+  border-bottom: 1px solid #dee2e7;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-main {
+  padding: 22px 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.left-section { display: flex; align-items: center; gap: 8px; min-width: 150px; }
+.logo { height: 44px; width: 44px; }
+.brand-name { color: #8CB7F5; font-family: 'Inter', sans-serif; font-size: 27px; font-weight: 700; margin: 0; }
+
+.search-box {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  border: 3px solid #0D6EFD;
+  border-radius: 6px;
+  margin: 0 70px;
+  overflow: hidden;
+}
+
+.search-input { 
+  flex: 1; 
+  border: none; 
+  padding: 0 15px; 
+  outline: none; 
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.select-wrapper { 
+  border-left: 1px solid #0D6EFD; 
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.category-select {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #1C1C1C;
+  width: 135px;
+  height: 100%;
+  padding: 0 30px 0 12px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%234D4D4D' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn { 
+  background: #0D6EFD; 
+  color: white; 
+  border: none; 
+  padding: 0 25px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  font-size: 15px;
+}
+
+.right-icons { display: flex; gap: 20px;  margin-right: -40px; }
+.icon-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+.icon-item img { height: 20px; margin-bottom: 4px; }
+.icon-item span { font-size: 12px; color: #8B96A5; font-family: 'Inter', sans-serif; }
+
+/* --- New Badge Styles --- */
+.icon-badge-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #FF9017;
+  color: white;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.badge.blue {
+  background: #0D6EFD;
+}
+
+.navbar-bottom { padding: 16px 0; }
+.bottom-flex { justify-content: space-between; }
+
+.menu-links { 
+  display: flex; 
+  gap: 25px; 
+  align-items: center; 
+  font-family: 'Inter', sans-serif; 
+  font-weight: 500; 
+  font-size: 15px; 
+  color: #1C1C1C; 
+}
+
+.menu-links span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.menu-links span:hover {
+  color: #0D6EFD;
+}
+
+/* --- New Dropdown Styles --- */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 6px;
+  border: 1px solid #DEE2E7;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content li {
+  color: #505050;
+  padding: 10px 15px;
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  background-color: #F7FAFC;
+  color: #0D6EFD;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.settings-links { display: flex; gap: 20px; align-items: center; }
+.ship-to { display: flex; align-items: center; gap: 6px; font-family: 'Inter', sans-serif; font-size: 15px; }
+.nav-flag { height: 13px; border-radius: 2px; }
+
+.help-select, .setting-select {
+  border: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0 20px 0 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231C1C1C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* --- Responsive Additions --- */
+
+@media (max-width: 1024px) {
+  .search-box {
+    margin: 0 20px; /* Reducing large 70px margin for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Allow the container to wrap elements into new lines */
+  .nav-container {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  .navbar-main {
+    padding: 10px 0;
+  }
+
+  /* 2. Force Logo/Brand to stay left and take up half space */
+  .left-section {
+    order: 1;
+    flex: 1;
+    min-width: auto;
+  }
+
+  /* 3. Force Icons to stay right and take up half space */
+  .right-icons {
+    order: 2;
+    margin-right: 0;
+    gap: 15px;
+  }
+
+  /* 4. Hide text under icons to save space on mobile */
+  .icon-item span {
+    display: none;
+  }
+
+  /* 5. Make Search Box jump to a new line (Order 3) and take 100% width */
+  .search-box {
+    order: 3;
+    flex: none;
+    width: 100%;
+    margin: 15px 0 5px 0;
+  }
+
+  /* 6. Hide the category select on small phones to give more room to the input */
+  .select-wrapper {
+    display: none;
+  }
+
+  /* 7. Handle the bottom menu links so they don't squish */
+  .navbar-bottom {
+    overflow-x: auto; /* Allows side-scrolling for the menu on mobile */
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bottom-flex {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .menu-links {
+    gap: 15px;
+  }
+
+  /* 8. Hide complex settings/flags on mobile for a cleaner look */
+  .settings-links {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 20px; /* Shrink text slightly for very small screens */
+  }
+  
+  .logo {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .right-icons {
+    gap: 10px;
+  }
+}

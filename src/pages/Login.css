@@ -1,0 +1,137 @@
+
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #DEE2E7;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.social-logins {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  padding: 12px;
+  border: 1px solid #DEE2E7;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background 0.2s;
+  color: white;
+}
+
+.google { background-color: #100d70; border: none; }
+.facebook { background-color: #4267B2; border: none; }
+.twitter { background-color: #1DA1F2; border: none; }
+
+.social-btn:hover { opacity: 0.9; }
+
+.separator {
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 1px solid #DEE2E7;
+  line-height: 0.1em;
+}
+
+.separator span {
+  background: #fff;
+  padding: 0 10px;
+  color: #8B96A5;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1C1C;
+}
+
+.input-group input {
+  padding: 12px;
+  border: 1px solid #DEE2E7;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-group input:focus {
+  border-color: #0D6EFD;
+}
+
+.main-login-btn {
+  background-color: #0D6EFD;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.main-login-btn:hover {
+  background-color: #0056b3;
+}
+
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #505050;
+  text-align: center;
+}
+
+.blue-link {
+  color: #0D6EFD;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.terms {
+  font-size: 12px;
+  color: #8B96A5;
+  margin-top: 15px;
+  text-align: center;
+}

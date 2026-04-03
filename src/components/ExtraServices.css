@@ -1,0 +1,163 @@
+.services-wrapper {
+  padding: 30px 40px;
+  background-color: #f8f9fa;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.services-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.services-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.service-card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #DEE2E7;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-img-container {
+  height: 120px;
+  width: 100%;
+  position: relative;
+}
+
+.service-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.service-content {
+  padding: 16px;
+  position: relative;
+  background: #fff;
+  min-height: 80px;
+}
+
+.service-icon-circle {
+  position: absolute;
+  top: -28px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #D1E7FF;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS PURE ICONS */
+.css-icon {
+  position: relative;
+  display: inline-block;
+}
+
+/* Search Icon */
+.icon-search::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #1C1C1C;
+  border-radius: 50%;
+  display: block;
+}
+.icon-search::after {
+  content: '';
+  width: 2px;
+  height: 8px;
+  background: #1C1C1C;
+  position: absolute;
+  bottom: -4px;
+  right: -2px;
+  transform: rotate(-45deg);
+}
+
+/* Inventory/Box Icon */
+.icon-inventory::before {
+  content: '';
+  width: 14px;
+  height: 12px;
+  border: 2px solid #1C1C1C;
+  display: block;
+}
+.icon-inventory::after {
+  content: '';
+  width: 18px;
+  height: 2px;
+  background: #1C1C1C;
+  position: absolute;
+  top: 4px;
+  left: -2px;
+}
+
+/* Send/Plane Icon */
+.icon-send {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 15px solid #1C1C1C;
+  transform: rotate(-20deg);
+}
+
+/* Shield Icon */
+.icon-shield {
+  width: 14px;
+  height: 16px;
+  background: #1C1C1C;
+  border-radius: 0 0 8px 8px;
+}
+.icon-shield::after {
+  content: '✓';
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: 1px;
+  left: 3px;
+}
+
+.service-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin: 0;
+  max-width: 150px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .services-flex {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,260 @@
+/* --- Base Wrapper & Layout --- */
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+}
+
+.white-container {
+  border: 1px solid #DEE2E7;
+  border-radius: 6px;
+  display: flex;
+  background-color: #fff;
+  width: 1180px;
+  height: 400px;
+  margin: 4px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Left Categories Panel --- */
+.categories-panel {
+  width: 220px;
+  padding: 20px;
+}
+
+.category-item {
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 17px;
+  font-family: 'Inter', sans-serif;
+  color: #505050;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: #E5F1FF;
+  border-radius: 6px;
+  color: #1C1C1C;
+  font-weight: 500;
+}
+
+/* --- Middle Banner Section --- */
+.banner-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.banner-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-align: left;
+  padding: 10px;
+}
+
+.banner-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  color: #1C1C1C;
+  margin-bottom: -24px;
+  font-weight: 400;
+}
+
+.banner-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  color: #1C1C1C;
+  margin-bottom: 20px;
+}
+
+.learn-btn {
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.learn-btn:hover {
+  background-color: #eeeeee;
+}
+
+/* --- Right Panel & Interaction Boxes --- */
+.right-panel {
+  width: 220px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-box {
+  width: 187px;
+  height: 150px;
+  background-color: #E3F0FF;
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.login-icon { 
+  width: 44px; 
+  height: 44px; 
+  object-fit: contain; 
+}
+
+.login-text {
+  font-family: 'Inter', sans-serif;
+  color: #1C1C1C;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.join-btn {
+  background-color: #0D6EFD;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.join-btn:hover {
+  background-color: #0056b3;
+}
+
+.login-btn {
+  background-color: #FFFFFF;
+  color: #0D6EFD;
+  border: 1px solid #DEE2E7;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- Promo Boxes --- */
+.orange-box {
+  width: 195px;
+  height: 95px;
+  background-color: #F38332;
+  padding: 12px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.green-box {
+  width: 195px;
+  height: 95px;
+  background-color: #55BDC3;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.orange-box:hover, .green-box:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 1200px) {
+  .white-container { 
+    width: 100%; 
+    height: auto; 
+    flex-direction: column; 
+    border: none;
+    overflow: visible;  
+  }
+  
+  .categories-panel { 
+    display: none; 
+  }
+
+  
+  .banner-section {
+    height: 300px; 
+    width: 100%;
+  }
+
+  .banner-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .right-panel { 
+    width: 100%; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    height: auto; 
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+  }
+  .login-box, .orange-box, .green-box { 
+    flex: 1;
+    min-width: 250px; 
+    width: auto;
+    height: auto; 
+    min-height: 120px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .user-info {
+    justify-content: flex-start;
+  }
+}

@@ -25,6 +25,10 @@ function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All category");
 
+ const [user] = React.useState(null); 
+const [messages] = React.useState([]); 
+const [orders] = React.useState([]);
+
   const isCartPage = location.pathname === "/cart"; 
 
   useEffect(() => {

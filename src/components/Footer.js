@@ -84,11 +84,11 @@ function Footer() {
             </div>
             <p className="brand-desc">Best information about the company gies here but now lorem ipsum is</p>
             <div className="social-links">
-              <a href="#" className="social-icon"><i className="fa-brands fa-facebook-f"></i></a>
-              <a href="#" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
-              <a href="#" className="social-icon"><i className="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" className="social-icon"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#" className="social-icon"><i className="fa-brands fa-youtube"></i></a>
+              <a href="/" className="social-icon"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="/" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
+              <a href="/" className="social-icon"><i className="fa-brands fa-linkedin-in"></i></a>
+              <a href="/" className="social-icon"><i className="fa-brands fa-instagram"></i></a>
+              <a href="/" className="social-icon"><i className="fa-brands fa-youtube"></i></a>
             </div>
           </div>
 

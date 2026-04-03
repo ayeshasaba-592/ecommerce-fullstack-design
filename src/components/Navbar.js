@@ -25,11 +25,6 @@ function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All category");
 
-  /* --- MOCK DATABASE STATES --- */
-  const [user, setUser] = useState(null); 
-  const [messages, setMessages] = useState([]); 
-  const [orders, setOrders] = useState([]); 
-
   const isCartPage = location.pathname === "/cart"; 
 
   useEffect(() => {

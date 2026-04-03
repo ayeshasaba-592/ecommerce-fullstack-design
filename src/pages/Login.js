@@ -21,7 +21,7 @@ function Login() {
     e.preventDefault();
     
     // 1. Force the URL to be absolute to avoid any relative path confusion
-    const baseUrl = "http://localhost:5000/api/users";
+    const baseUrl = "https://my-ecommerce-backend-api.vercel.app/api/users";
     const endpoint = isRegistering ? 'register' : 'login';
     const finalUrl = `${baseUrl}/${endpoint}`;
 
@@ -30,7 +30,7 @@ function Login() {
 
     try {
      const response = await axios.post(
-  `http://localhost:5000/api/users/${isRegistering ? 'register' : 'login'}`, 
+  `https://my-ecommerce-backend-api.vercel.app/api/users/${isRegistering ? 'register' : 'login'}`,
   formData
 );
       

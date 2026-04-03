@@ -9,10 +9,24 @@ function AdminPanel() {
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
 
+  // Helper to get the Admin Token from LocalStorage
+  const getAuthHeaders = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return {
+      headers: {
+        Authorization: `Bearer ${user?.token}`,
+      },
+    };
+  };
+
   // 1. Load products so we can delete/edit them
   const fetchProducts = async () => {
-    const { data } = await axios.get('http://localhost:5000/api/products');
-    setProducts(data);
+    try {
+      const { data } = await axios.get('https://my-ecommerce-backend-api.vercel.app/api/products');
+      setProducts(data);
+    } catch (err) {
+      console.error("Fetch Error:", err);
+    }
   };
 
   useEffect(() => { fetchProducts(); }, []);
@@ -20,32 +34,43 @@ function AdminPanel() {
   // 2. Handle Add / Update
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isEditing) {
-      // Update existing product
-      await axios.put(`http://localhost:5000/api/products/${editId}`, formData);
-      alert("Product Updated!");
-    } else {
-      // Add new product
-      await axios.post('http://localhost:5000/api/products', formData);
-      alert("Product Added!");
+    const config = getAuthHeaders(); // Get the token for protected routes
+
+    try {
+      if (isEditing) {
+        // Update existing product
+        await axios.put(`https://my-ecommerce-backend-api.vercel.app/api/products/${editId}`, formData, config);
+        alert("Product Updated!");
+      } else {
+        // Add new product
+        await axios.post('https://my-ecommerce-backend-api.vercel.app/api/products', formData, config);
+        alert("Product Added!");
+      }
+      
+      // Reset form and state
+      setFormData({ name: '', price: '', description: '', image: '', category: '' });
+      setIsEditing(false);
+      setEditId(null);
+      fetchProducts(); 
+    } catch (err) {
+      alert("Error: " + (err.response?.data?.message || "Check Admin Permissions"));
     }
-    
-    // Reset form and state
-    setFormData({ name: '', price: '', description: '', image: '', category: '' });
-    setIsEditing(false);
-    setEditId(null);
-    fetchProducts(); 
   };
 
   // 3. Handle Delete
   const handleDelete = async (id) => {
     if(window.confirm("Delete this product?")) {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
-      fetchProducts();
+      const config = getAuthHeaders(); // Get the token for protected routes
+      try {
+        await axios.delete(`https://my-ecommerce-backend-api.vercel.app/api/products/${id}`, config);
+        fetchProducts();
+      } catch (err) {
+        alert("Delete failed: " + (err.response?.data?.message || "Unauthorized"));
+      }
     }
   };
 
-  //  Load data into form for editing ---
+  // Load data into form for editing ---
   const handleEditClick = (product) => {
     setIsEditing(true);
     setEditId(product._id);
@@ -89,17 +114,21 @@ function AdminPanel() {
           </tr>
         </thead>
         <tbody>
-          {products.map(p => (
-            <tr key={p._id}>
-              <td>{p.name}</td>
-              <td>${p.price}</td>
-              <td>
-                {/* --- ADDED EDIT BUTTON --- */}
-                <button onClick={() => handleEditClick(p)} style={{ backgroundColor: 'orange', color: 'white', marginRight: '5px' }}>Edit</button>
-                <button onClick={() => handleDelete(p._id)} style={{ backgroundColor: 'red', color: 'white' }}>Delete</button>
-              </td>
-            </tr>
-          ))}
+          {products.length > 0 ? (
+            products.map(p => (
+              <tr key={p._id}>
+                <td>{p.name}</td>
+                <td>${p.price}</td>
+                <td>
+                  {/* --- EDIT BUTTON --- */}
+                  <button onClick={() => handleEditClick(p)} style={{ backgroundColor: 'orange', color: 'white', marginRight: '5px' }}>Edit</button>
+                  <button onClick={() => handleDelete(p._id)} style={{ backgroundColor: 'red', color: 'white' }}>Delete</button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr><td colSpan="3" style={{ textAlign: 'center', padding: '20px' }}>No products found or loading...</td></tr>
+          )}
         </tbody>
       </table>
     </div>

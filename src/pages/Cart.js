@@ -96,8 +96,8 @@ const Cart = () => {
     const user = JSON.parse(userData);
 
     try {
-      // 3. Send order with User Info
-      const response = await axios.post("http://localhost:5000/api/orders", {
+      // 3. ✅ UPDATED: Send order to your Live Vercel Backend
+      const response = await axios.post("https://my-ecommerce-backend-api.vercel.app/api/orders", {
         userId: user._id, // Adding the user ID to the order
         items: cartItems,
         totalAmount: total,
@@ -158,9 +158,9 @@ const Cart = () => {
             </div>
             
             <div className="cart-features">
-               <div className="feature"><i className="fas fa-lock"></i> <div><strong>Secure Payment</strong><p>Have you ever finally just</p></div></div>
-               <div className="feature"><i className="fas fa-comment"></i> <div><strong>Customer Support</strong><p>Have you ever finally just</p></div></div>
-               <div className="feature"><i className="fas fa-truck"></i> <div><strong>Free Delivery</strong><p>Have you ever finally just</p></div></div>
+                <div className="feature"><i className="fas fa-lock"></i> <div><strong>Secure Payment</strong><p>Have you ever finally just</p></div></div>
+                <div className="feature"><i className="fas fa-comment"></i> <div><strong>Customer Support</strong><p>Have you ever finally just</p></div></div>
+                <div className="feature"><i className="fas fa-truck"></i> <div><strong>Free Delivery</strong><p>Have you ever finally just</p></div></div>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./InquiryForm.css"; // Link your CSS file
-import Inquirybg from "../assets/Inquirybg.png"; // Replace with your image path
+import "./InquiryForm.css"; 
+import Inquirybg from "../assets/Inquirybg.png"; 
 
 function InquiryForm() {
   const [formData, setFormData] = useState({

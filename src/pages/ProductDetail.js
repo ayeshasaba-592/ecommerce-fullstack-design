@@ -49,8 +49,8 @@ const ProductDetail = () => {
           setProduct(location.state.product);
           setLoading(false);
         } else {
-          // If no state, fetch from MongoDB by ID
-          const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+          // ✅ UPDATED: Fetching from your Live Vercel Backend
+          const res = await axios.get(`https://my-ecommerce-backend-api.vercel.app/api/products/${id}`);
           setProduct(res.data);
           setLoading(false);
         }
@@ -92,7 +92,7 @@ const ProductDetail = () => {
   }
 
   // Determine which image to show (Local lookup vs URL)
-const displayImage = IMGS[product.image] || product.img || product.image || phoneImg;
+  const displayImage = IMGS[product.image] || product.img || product.image || phoneImg;
 
   const relatedProducts = [
     { id: 101, name: "Xiaomi Redmi 8 Original", price: "32", img: phoneImg },

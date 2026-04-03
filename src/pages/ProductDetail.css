@@ -227,7 +227,7 @@
     -webkit-overflow-scrolling: touch; 
   }
 
-   THE PRICE TIERS 
+   /*THE PRICE TIERS*/ 
   .pd-price-tiers { 
     flex-direction: column; 
     gap: 10px;
@@ -243,14 +243,14 @@
   }
   .price-tier:last-child { border-bottom: none; }
 
-   Supplier Panel & Buttons */
+   /*Supplier Panel & Buttons */
   .pd-supplier-panel {
     margin-top: 20px;
     width: 100% !important;
     float: none;
   }
 
-   Blue Banner */
+   /*Blue Banner */
   .pd-discount-banner { 
     flex-direction: column; 
     text-align: center; 
@@ -265,7 +265,7 @@
     width: 100%; 
   }
 
-   Table layout */
+   /*Table layout */
   .pd-details-table td:first-child {
     width: 100px;
   }

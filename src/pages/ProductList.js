@@ -79,8 +79,8 @@ useEffect(() => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:5000/api/products");
-        setProducts(res.data);
+        const response = await axios.get('https://my-ecommerce-backend-api.vercel.app/api/products');
+        setProducts(response.data);
         setLoading(false);
       } catch (err) {
         console.error("Fetch error:", err);
